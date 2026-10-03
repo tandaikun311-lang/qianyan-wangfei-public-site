@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="芊颜王妃品牌合作中心｜产品、分享与伙伴入口">
+  <meta name="theme-color" content="#1688ff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="芊颜王妃｜品牌合作中心">
+  <meta property="og:description" content="了解芊颜王妃产品组合、合作路径与伙伴入口。">
+  <meta property="og:site_name" content="芊颜王妃">
+  <meta property="og:image" content="https://tandaikun.com/partner/assets/brand-scene.webp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="芊颜王妃｜品牌合作中心">
+  <meta name="twitter:description" content="了解芊颜王妃产品组合、合作路径与伙伴入口。">
+  <meta name="twitter:image" content="https://tandaikun.com/partner/assets/brand-scene.webp">
+  <link rel="canonical" href="https://tandaikun.com/partner/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="robots" content="index,follow">
+  <title>芊颜王妃｜品牌合作中心</title>
+  <style>
+    :root {
+      --bg: #f4f8fc;
+      --surface: #ffffff;
+      --surface-soft: #f7fbff;
+      --ink: #172235;
+      --muted: #6f7d90;
+      --line: #e3ebf4;
+      --line-strong: #d3deea;
+      --brand-blue: #1688ff;
+      --brand-blue-deep: #0d63d8;
+      --brand-blue-soft: #eaf5ff;
+      --navy: #173d72;
+      --success: #1c8a62;
+      --warning: #ec8a2e;
+      --shadow: 0 16px 38px rgba(43, 78, 116, .09);
+      --shadow-soft: 0 7px 22px rgba(43, 78, 116, .055);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(74, 169, 255, .11), transparent 26rem),
+        radial-gradient(circle at 92% 18%, rgba(130, 200, 255, .1), transparent 25rem),
+        linear-gradient(180deg, #fbfdff 0%, var(--bg) 58%, #f1f6fb 100%);
+      font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    [hidden] { display: none !important; }
+    #shareUrl { overflow-wrap: anywhere; }
+    :focus-visible { outline: 3px solid #1688ff; outline-offset: 3px; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .shell { width: min(1160px, calc(100% - 28px)); margin: 0 auto; }
+
+    .public-strip {
+      padding: 10px 16px;
+      color: #225a9f;
+      background: linear-gradient(90deg, #edf7ff, #e4f2ff 50%, #edf7ff);
+      border-bottom: 1px solid #d9eafa;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: .02em;
+    }
+    .public-strip strong { font-weight: 800; color: var(--brand-blue-deep); }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
+      padding: 16px 0 14px;
+      border-bottom: 1px solid rgba(215, 227, 240, .85);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 11px; }
+    .brand-mark {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(145deg, #35b4ff, #1475ed);
+      border: 1px solid rgba(13, 99, 216, .18);
+      border-radius: 13px 13px 13px 4px;
+      box-shadow: 0 7px 18px rgba(22, 136, 255, .2);
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      transform: rotate(-3deg);
+    }
+    .brand-name { color: #1b3c70; font-size: 18px; font-weight: 800; letter-spacing: .08em; }
+    .brand-sub { color: #8190a4; font-size: 11px; letter-spacing: .08em; }
+    .topnav { display: flex; align-items: center; gap: 5px; max-width: 100%; overflow-x: auto; color: var(--muted); font-size: 12px; scrollbar-width: none; white-space: nowrap; }
+    .topnav::-webkit-scrollbar { display: none; }
+    .topnav a { display: inline-flex; flex: 0 0 auto; align-items: center; min-height: 44px; padding: 7px 9px; border: 1px solid transparent; border-radius: 8px; transition: color .2s ease, background .2s ease, border-color .2s ease; }
+    .topnav a:first-child { color: var(--brand-blue-deep); background: var(--brand-blue-soft); border-color: #d5eafb; }
+    .topnav a:hover { color: var(--brand-blue-deep); background: var(--brand-blue-soft); border-color: #d5eafb; }
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      flex: 0 0 auto;
+      padding: 7px 11px; border: 1px solid #d9e9f8; border-radius: 999px;
+      color: #197450; background: #f7fffb; font-size: 12px;
+    }
+    .status-dot { width: 7px; height: 7px; background: #3fb980; border-radius: 50%; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+      min-height: auto;
+      margin-top: 16px;
+      padding: 31px 21px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 94% 12%, rgba(96, 187, 255, .34), transparent 13rem),
+        radial-gradient(circle at 70% 88%, rgba(181, 224, 255, .58), transparent 20rem),
+        linear-gradient(120deg, #eff8ff 0%, #f8fcff 54%, #edf7ff 100%);
+      border: 1px solid #dcebf7;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .75;
+      pointer-events: none;
+      background-image: linear-gradient(115deg, transparent 0 42%, rgba(22,136,255,.04) 42.2% 42.5%, transparent 42.7%), linear-gradient(20deg, transparent 0 68%, rgba(22,136,255,.035) 68.3% 68.5%, transparent 68.8%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -5%; bottom: -40%;
+      width: 360px; height: 360px;
+      border: 1px solid rgba(22, 136, 255, .16);
+      border-radius: 50%;
+      box-shadow: 0 0 0 30px rgba(22, 136, 255, .035), 0 0 0 60px rgba(22, 136, 255, .02);
+    }
+    .eyebrow { margin: 0 0 13px; color: var(--brand-blue-deep); font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .hero h1 { max-width: 620px; margin: 0; color: #152944; font-family: Georgia, "Songti SC", serif; font-size: clamp(36px, 10vw, 48px); line-height: 1.08; letter-spacing: -.045em; }
+    .hero h1 span { color: var(--brand-blue); }
+    .hero-copy { max-width: 570px; margin: 19px 0 0; color: #62748c; font-size: 16px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 27px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 16px;
+      border: 1px solid transparent; border-radius: 9px;
+      cursor: pointer; font-weight: 750; transition: .2s ease;
+    }
+    .button-primary { color: #fff; background: var(--brand-blue); box-shadow: 0 9px 20px rgba(22, 136, 255, .2); }
+    .button-primary:hover { background: #0e78ea; transform: translateY(-1px); }
+    .button-ghost { color: #1769bd; border-color: #c3ddf4; background: rgba(255,255,255,.72); }
+    .button-ghost:hover { color: var(--brand-blue-deep); border-color: #96c8f2; background: #fff; }
+    .hero-note { display: flex; gap: 8px; align-items: center; margin: 18px 0 0; color: #71839a; font-size: 12px; }
+    .hero-note::before { content: "✦"; color: var(--brand-blue); }
+    .hero-aside { position: relative; z-index: 1; justify-self: stretch; width: 100%; }
+    .lifestyle-scene {
+      position: relative;
+      min-height: 165px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      border: 1px solid #c8e1f5;
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(255,255,255,.95), rgba(192,227,255,.72)), radial-gradient(circle at 75% 25%, rgba(80,170,255,.38), transparent 8rem);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 14px 28px rgba(49, 108, 166, .1);
+    }
+    .lifestyle-scene::before {
+      content: "";
+      position: absolute;
+      inset: auto -12% -48% 12%;
+      height: 170px;
+      border-radius: 50%;
+      background: rgba(91, 178, 248, .17);
+      transform: rotate(-9deg);
+    }
+    .scene-caption { position: absolute; top: 16px; left: 17px; color: #4285be; font-size: 10px; font-weight: 800; letter-spacing: .16em; }
+    .scene-copy { position: absolute; left: 17px; bottom: 16px; max-width: 165px; color: #18375d; font-family: Georgia, serif; font-size: 20px; line-height: 1.1; }
+    .scene-copy em { color: var(--brand-blue); font-style: normal; }
+    .scene-orb { position: absolute; right: 30px; top: 29px; width: 92px; height: 92px; border: 1px solid rgba(22,136,255,.45); border-radius: 50%; box-shadow: 0 0 0 16px rgba(22,136,255,.08), 0 0 0 34px rgba(22,136,255,.035); }
+    .scene-person { position: absolute; right: 69px; bottom: 23px; width: 26px; height: 63px; border-radius: 14px 14px 7px 7px; background: linear-gradient(180deg, #eef6ff 0 21%, #3b8fd8 22% 55%, #1d4f88 56%); transform: rotate(7deg); box-shadow: 17px 14px 0 -7px rgba(32, 85, 138, .32); }
+    .scene-bottle { position: absolute; right: 19px; bottom: 17px; width: 24px; height: 56px; border-radius: 8px 8px 5px 5px; background: linear-gradient(90deg, #2e83d0, #9bd5ff 48%, #2870ba); box-shadow: 0 8px 16px rgba(31, 88, 137, .2); }
+    .scene-bottle::before { content: ""; position: absolute; top: -9px; left: 7px; width: 10px; height: 12px; border-radius: 3px 3px 0 0; background: #1e5b9b; }
+    .seal-card {
+      padding: 25px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid #d6e7f5;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(42, 94, 145, .08);
+    }
+    .seal-kicker { color: #4b8bc0; font-size: 12px; letter-spacing: .1em; }
+    .seal-value { margin: 15px 0 5px; color: #18375d; font-family: Georgia, serif; font-size: 39px; line-height: 1; }
+    .seal-copy { margin: 0; color: #71839a; font-size: 13px; }
+    .seal-rule { height: 1px; margin: 21px 0 16px; background: #e0ebf5; }
+    .seal-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; color: #62748c; font-size: 13px; }
+    .seal-list li { display: flex; justify-content: space-between; gap: 16px; }
+    .seal-list strong { color: var(--brand-blue-deep); font-weight: 650; }
+
+    .section { padding: 42px 0 0; }
+    .section-head { display: block; margin-bottom: 17px; }
+    .section-kicker { margin: 0 0 6px; color: var(--brand-blue-deep); font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .section-title { margin: 0; color: #1e2c3f; font-family: Georgia, "Songti SC", serif; font-size: clamp(25px, 3vw, 34px); letter-spacing: -.03em; }
+    .section-desc { margin: 6px 0 0; color: var(--muted); }
+    .section-link { color: var(--brand-blue-deep); font-size: 13px; font-weight: 750; }
+
+    .metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+    .metric { position: relative; overflow: hidden; padding: 20px 18px; background: rgba(255,255,255,.95); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-soft); }
+    .metric::after { content: ""; position: absolute; right: -12px; bottom: -30px; width: 78px; height: 78px; border: 1px solid rgba(22,136,255,.14); border-radius: 50%; }
+    .metric-label { color: var(--muted); font-size: 12px; }
+    .metric-value { margin-top: 6px; font-size: 24px; font-weight: 800; letter-spacing: -.03em; }
+    .metric-hint { margin-top: 3px; color: #9aa8b8; font-size: 11px; }
+    .metric-placeholder { color: var(--brand-blue-deep); }
+
+    .products { display: grid; grid-template-columns: 1fr; gap: 13px; }
+    .product {
+      position: relative;
+      display: flex; min-height: 236px; flex-direction: column;
+      padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+      box-shadow: 0 7px 22px rgba(43, 78, 116, .045); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .product::before { content: ""; position: absolute; top: 0; left: 24px; right: 24px; height: 3px; border-radius: 0 0 4px 4px; background: linear-gradient(90deg, rgba(22,136,255,.1), rgba(22,136,255,.65), rgba(22,136,255,.1)); }
+    .product:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #b9d8f2; }
+    .product.featured { border-color: #b7daf8; background: linear-gradient(160deg, #fff, #f2f9ff); }
+    .product-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .tag { padding: 5px 9px; color: #1768bd; background: var(--brand-blue-soft); border: 1px solid #d5eafb; border-radius: 99px; font-size: 11px; font-weight: 800; }
+    .tag-muted { color: #6a788b; background: #f2f5f8; border-color: #e6ecf2; }
+    .product-index { color: #9aa8b8; font-size: 12px; }
+    .product-art { position: relative; width: 100%; height: 52px; margin: 18px 0 2px; border-radius: 10px; overflow: hidden; background: linear-gradient(120deg, #8fd0ff, #3f82d3); }
+    .product-art::before { content: ""; position: absolute; width: 80px; height: 80px; right: 18px; top: -27px; border: 1px solid rgba(255,255,255,.76); border-radius: 50%; box-shadow: 0 0 0 14px rgba(255,255,255,.14); }
+    .product-art::after { content: ""; position: absolute; width: 25px; height: 34px; right: 42px; bottom: 7px; border-radius: 7px 7px 5px 5px; background: linear-gradient(90deg, rgba(35,104,175,.9), rgba(211,240,255,.95)); box-shadow: 13px -7px 0 -4px rgba(26,82,139,.45); }
+    .product-art.cool { background: linear-gradient(120deg, #d3ecff, #6399db); }
+    .product-art.soft { background: linear-gradient(120deg, #c4e6ff, #6485c4); }
+    .product h3 { margin: 15px 0 7px; color: #1e2c3f; font-family: Georgia, "Songti SC", serif; font-size: 22px; }
+    .product p { margin: 0; color: var(--muted); font-size: 13px; }
+    .product-price { display: flex; align-items: baseline; gap: 3px; margin-top: auto; padding-top: 24px; color: var(--brand-blue-deep); }
+    .product-price strong { font-size: 30px; letter-spacing: -.04em; }
+    .product-price small { color: var(--muted); font-size: 12px; }
+    .product-foot { margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--line); color: #8b9aab; font-size: 11px; }
+    .product-detail-button { width: 100%; min-height: 44px; margin-top: 13px; padding: 8px 12px; color: var(--brand-blue-deep); background: var(--brand-blue-soft); border: 1px solid #cfe5f8; border-radius: 9px; cursor: pointer; font-weight: 750; text-align: center; transition: background .2s ease, border-color .2s ease, transform .2s ease; }
+    .product-detail-button:hover, .product-detail-button:focus-visible { background: #dff0ff; border-color: #9ecbf1; outline: none; }
+    .product-detail-button:focus-visible { box-shadow: 0 0 0 3px rgba(22, 136, 255, .16); }
+    .product-detail-button:active { transform: translateY(1px); }
+    .product-detail-dialog { width: min(520px, calc(100% - 28px)); max-height: min(640px, calc(100dvh - 32px)); padding: 0; color: var(--ink); background: var(--surface); border: 1px solid #cfe2f3; border-radius: 16px; box-shadow: 0 24px 70px rgba(27, 64, 103, .24); }
+    .product-detail-dialog::backdrop { background: rgba(16, 42, 72, .48); }
+    .product-detail-dialog[open] { animation: product-dialog-in .18s ease-out; }
+    @keyframes product-dialog-in { from { opacity: 0; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    .product-detail-content { padding: 22px; }
+    .product-detail-top { display: flex; align-items: start; justify-content: space-between; gap: 14px; }
+    .product-detail-title { margin: 8px 0 0; color: #1e2c3f; font-family: Georgia, "Songti SC", serif; font-size: 27px; line-height: 1.2; }
+    .product-detail-close { display: grid; width: 40px; height: 40px; place-items: center; flex: 0 0 auto; color: #5f7187; background: #f5f9fd; border: 1px solid #dce8f2; border-radius: 9px; cursor: pointer; font-size: 22px; line-height: 1; }
+    .product-detail-close:hover, .product-detail-close:focus-visible { color: var(--brand-blue-deep); border-color: #a9cfee; outline: none; }
+    .product-detail-summary { margin: 13px 0 0; color: var(--muted); font-size: 14px; }
+    .product-detail-list { display: grid; gap: 9px; margin: 18px 0 0; padding: 16px; background: var(--surface-soft); border: 1px solid #e1edf7; border-radius: 11px; list-style: none; }
+    .product-detail-list li { display: flex; justify-content: space-between; gap: 14px; color: var(--muted); font-size: 13px; }
+    .product-detail-list strong { color: #1f5389; font-weight: 750; text-align: right; }
+    .product-detail-note { margin: 17px 0 0; padding: 11px 12px; color: #35638f; background: #edf7ff; border: 1px solid #d5eafb; border-radius: 9px; font-size: 12px; }
+    .product-detail-dialog .button { width: 100%; margin-top: 18px; }
+
+    .share-grid { display: grid; grid-template-columns: 1fr; gap: 13px; align-items: stretch; }
+    .share-card, .rules-card { padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow-soft); }
+    .share-card { position: relative; overflow: hidden; background: linear-gradient(145deg, #ffffff, #eef8ff); }
+    .share-card::after { content: "↗"; position: absolute; right: 26px; top: 21px; display: none; width: 44px; height: 44px; place-items: center; color: var(--brand-blue-deep); border: 1px solid #c7e3fa; border-radius: 50%; font-size: 18px; transform: rotate(-10deg); }
+    .share-title { max-width: 480px; }
+    .share-subtitle { max-width: 520px; }
+    .share-preview {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-top: 17px;
+      padding: 11px 12px;
+      background: linear-gradient(105deg, #f3faff, #ffffff);
+      border: 1px solid #d3e9fa;
+      border-radius: 12px;
+    }
+    .share-preview-mark {
+      display: grid;
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(145deg, #36b5ff, #1475ed);
+      border: 1px solid rgba(13, 99, 216, .18);
+      border-radius: 12px 12px 12px 4px;
+      box-shadow: 0 5px 13px rgba(22, 136, 255, .18);
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .share-preview-copy { display: grid; min-width: 0; gap: 1px; }
+    .share-preview-copy strong { color: #1b3c70; font-size: 14px; }
+    .share-preview-copy small { color: #7489a1; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .share-preview-badge { margin-left: auto; padding: 4px 7px; color: #1970c5; background: #e9f5ff; border: 1px solid #d1eafa; border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: .05em; }
+    .share-form { display: flex; flex-direction: column; gap: 9px; margin-top: 19px; }
+    .share-form input { min-width: 0; width: 100%; height: 48px; padding: 0 13px; color: var(--ink); background: rgba(255,255,255,.92); border: 1px solid var(--line-strong); border-radius: 9px; outline: none; }
+    .share-form input:focus { border-color: var(--brand-blue); box-shadow: 0 0 0 3px rgba(22, 136, 255, .13); }
+    .share-form .button { width: 100%; height: 48px; }
+    #shareUrl { min-height: 24px; margin-top: 13px; color: var(--brand-blue-deep); font-size: 12px; word-break: break-all; }
+    .rules-card h3 { margin: 0 0 16px; font-size: 16px; }
+    .rules-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .rules-list li { display: grid; grid-template-columns: 20px 1fr; gap: 8px; color: var(--muted); font-size: 13px; }
+    .rules-list li::before { content: "✓"; color: var(--success); font-weight: 800; }
+
+    .api-panel {
+      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f1f8ff);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow-soft);
+    }
+    .api-panel-head { display: block; }
+    .api-mode-badge {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 10px;
+      color: #1768bd;
+      background: var(--brand-blue-soft);
+      border: 1px solid #d5eafb;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .api-help { max-width: 760px; margin: 7px 0 0; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+    .api-help code { padding: 2px 5px; color: #27639f; background: #edf6ff; border-radius: 5px; font-size: 12px; overflow-wrap: anywhere; }
+    .api-config { display: grid; grid-template-columns: 1fr; gap: 12px; align-items: end; margin-top: 18px; }
+    .api-field { display: grid; gap: 6px; }
+    .api-field label { color: var(--muted); font-size: 12px; font-weight: 750; }
+    .api-field input, .api-field select {
+      width: 100%; height: 48px; padding: 0 12px; color: var(--ink);
+      background: rgba(255,255,255,.94); border: 1px solid var(--line-strong); border-radius: 9px; outline: none;
+    }
+    .api-field input:focus, .api-field select:focus { border-color: var(--brand-blue); box-shadow: 0 0 0 3px rgba(22, 136, 255, .13); }
+    .api-field small { color: #8c9aaa; font-size: 11px; }
+    .api-actions { display: grid; grid-template-columns: 1fr; gap: 9px; margin-top: 15px; }
+    .api-actions .button { width: 100%; min-height: 48px; }
+    .api-status { min-height: 24px; margin: 14px 0 0; color: var(--muted); font-size: 12px; }
+    .api-status[data-state="success"] { color: var(--success); }
+    .api-status[data-state="error"] { color: #c55b46; }
+    .api-result { margin: 8px 0 0; color: var(--brand-blue-deep); font-size: 13px; font-weight: 700; }
+
+    footer { padding: 48px 0 28px; color: #8b9aab; font-size: 12px; }
+    .footer-line { display: block; padding-top: 17px; border-top: 1px solid var(--line); }
+    .footer-demo { color: var(--brand-blue-deep); font-weight: 750; }
+
+    /* Tablet and desktop layouts extend the mobile baseline. */
+    @media (min-width: 561px) {
+      .shell { width: min(1180px, calc(100% - 40px)); }
+      .topbar { flex-direction: row; align-items: center; justify-content: space-between; padding: 18px 0 17px; }
+      .topnav { justify-content: flex-end; font-size: 13px; overflow-x: visible; }
+      .hero { padding: 42px 32px; border-radius: 20px; }
+      .hero h1 { font-size: clamp(42px, 6vw, 58px); }
+      .section { padding-top: 54px; }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+      .section-link { margin-top: 0; }
+      .metrics { gap: 13px; }
+      .metric { padding: 20px 18px; }
+      .product { padding: 25px; }
+      .share-card, .rules-card, .api-panel { padding: 27px; }
+      .share-form { flex-direction: row; }
+      .share-form input { width: auto; }
+      .share-form .button { width: auto; }
+      .share-card::after { display: grid; }
+      .api-panel-head { display: flex; align-items: start; justify-content: space-between; gap: 18px; }
+      .api-mode-badge { display: inline-block; margin-top: 0; }
+      .api-config { grid-template-columns: 1fr 1fr; }
+      .api-field-url { grid-column: 1 / -1; }
+      .api-actions { display: flex; flex-wrap: wrap; }
+      .api-actions .button { width: auto; min-height: 40px; }
+      footer { padding: 64px 0 35px; }
+      .footer-line { display: flex; justify-content: space-between; gap: 15px; }
+    }
+
+    @media (min-width: 821px) {
+      .hero { grid-template-columns: minmax(0, 1.15fr) minmax(290px, .85fr); gap: 38px; min-height: 430px; margin-top: 24px; padding: 55px clamp(24px, 6vw, 76px); border-radius: 22px; }
+      .hero-aside { justify-self: end; width: min(100%, 350px); }
+      .metrics { grid-template-columns: repeat(4, 1fr); }
+      .products { grid-template-columns: repeat(3, 1fr); gap: 17px; }
+      .product { min-height: 296px; }
+      .share-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr); gap: 15px; }
+      .api-config { grid-template-columns: minmax(0, 1fr) 150px 150px; }
+      .api-field-url { grid-column: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="visual-polish.css?v=20261003T054500Z">
+</head>
+<body>
+  <div class="public-strip"><strong>官方品牌合作中心</strong>　面向合作伙伴的产品信息与合作入口</div>
+
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="芊颜王妃品牌合作中心首页">
+        <span class="brand-mark">妃</span>
+        <span><span class="brand-name">芊颜王妃</span><br><span class="brand-sub">品牌合作中心 · PARTNER DESK</span></span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="#products">产品</a>
+        <a href="#process">合作流程</a>
+        <a href="#share-tools">申请合作</a>
+        <a href="#share-tools">伙伴入口</a>
+        <span class="status-pill"><span class="status-dot"></span>线上入口</span>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero cover-hero" aria-labelledby="hero-title">
+        <div class="cover-carousel" id="coverCarousel" aria-label="品牌视觉轮播">
+          <img id="coverCarouselImage" src="assets/brand-scene.webp" alt="芊颜王妃品牌人物封面场景" fetchpriority="high">
+          <div class="cover-carousel-dots" role="tablist" aria-label="选择封面图片">
+            <button class="cover-carousel-dot is-active" type="button" role="tab" aria-selected="true" aria-label="品牌人物封面" data-cover-index="0"></button>
+            <button class="cover-carousel-dot" type="button" role="tab" aria-selected="false" aria-label="产品组合封面" data-cover-index="1"></button>
+            <button class="cover-carousel-dot" type="button" role="tab" aria-selected="false" aria-label="护理细节封面" data-cover-index="2"></button>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">QIAN YAN WANG FEI · PARTNER EDITION</p>
+          <h1 id="hero-title">把状态，<span>写在脸上</span></h1>
+          <p class="hero-copy">一份关于产品、体验与伙伴关系的品牌特刊。以清晰信息为起点，把每一次分享变成值得被看见的合作。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#products">查看产品组合 <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="#share-tools">申请合作 <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note">VOL. 01 · BEAUTY / PARTNERS / EVERYDAY RITUAL</p>
+          <div class="hero-meta" aria-label="合作中心信息"><span>公开产品说明</span><span>申请后沟通审核</span><span>规则以确认版为准</span></div>
+        </div>
+        <aside class="hero-aside" aria-label="品牌介绍">
+          <div class="lifestyle-scene" data-slot="hero-image">
+            <img src="assets/brand-scene.webp" alt="明亮美容咨询空间中的品牌场景示意图" loading="eager">
+            <span class="scene-caption">品牌场景示意 · A QUIET RITUAL</span>
+            <span class="scene-copy">把好产品，<em>分享给对的人</em></span>
+            <span class="scene-orb"></span>
+            <span class="scene-person"></span>
+            <span class="scene-bottle"></span>
+          </div>
+          <div class="seal-card">
+            <div class="seal-kicker">OUR PROMISE</div>
+            <div class="seal-value">清晰 · 稳定</div>
+            <p class="seal-copy">从产品体验到伙伴协作，每一步都值得被认真记录。</p>
+            <div class="seal-rule"></div>
+            <ul class="seal-list">
+              <li><span>产品组合</span><strong>3 个</strong></li>
+              <li><span>归因关系</span><strong>一层直推</strong></li>
+              <li><span>信息状态</span><strong>公开说明</strong></li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="process" aria-labelledby="process-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Partner journey</p>
+            <h2 class="section-title" id="process-title">合作流程</h2>
+            <p class="section-desc">从了解产品到进入伙伴体系，每一步都先确认信息和合作规则。</p>
+          </div>
+          <a class="section-link" href="#share-tools">按流程申请 ↗</a>
+        </div>
+        <div class="metrics" aria-label="合作流程">
+          <article class="metric"><div class="metric-label">01 · 了解</div><div class="metric-value metric-placeholder">看产品</div><div class="metric-hint">查看组合、适用人群和合作说明</div></article>
+          <article class="metric"><div class="metric-label">02 · 沟通</div><div class="metric-value metric-placeholder">提申请</div><div class="metric-hint">留下合作意向，由品牌方进行沟通与审核</div></article>
+          <article class="metric"><div class="metric-label">03 · 确认</div><div class="metric-value metric-placeholder">签规则</div><div class="metric-hint">以确认后的商品、订单和结算规则为准</div></article>
+          <article class="metric"><div class="metric-label">04 · 运营</div><div class="metric-value metric-placeholder">做服务</div><div class="metric-hint">使用素材、培训与伙伴工具开展经营</div></article>
+        </div>
+      </section>
+
+      <section class="section" id="products" aria-labelledby="products-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Curated collection</p>
+            <h2 class="section-title" id="products-title">产品组合</h2>
+            <p class="section-desc">真实产品 · 清晰信息 · 合作规则以确认版本为准</p>
+          </div>
+          <a class="section-link" href="#products">查看全部组合 ↗</a>
+        </div>
+        <div class="products">
+          <article class="product featured">
+            <div class="product-top"><span class="tag">董事礼包</span><span class="product-index">01 / 03</span></div>
+            <div class="product-art" data-slot="product-image"><img src="assets/product-collection.webp" alt="无品牌文字的产品组合场景示意图" loading="lazy"></div>
+            <h3>四大四小产品组合</h3>
+            <p>4 个正装套 + 4 个体验装套</p>
+            <div class="product-price"><strong>合作方案</strong><small>按确认版本</small></div>
+            <div class="product-foot">奖励与结算以实际有效订单规则为准</div>
+            <button class="product-detail-button" type="button" data-product="director">查看产品详情</button>
+          </article>
+          <article class="product">
+            <div class="product-top"><span class="tag">联合创始人</span><span class="product-index">02 / 03</span></div>
+            <div class="product-art cool" data-slot="product-image"><img src="assets/product-serum.webp" alt="蓝色精华瓶与面霜罐产品摄影示意图" loading="lazy"></div>
+            <h3>联合创始人产品包</h3>
+            <p>产品规格以正式订单清单为准</p>
+            <div class="product-price"><strong>合作方案</strong><small>按确认版本</small></div>
+            <div class="product-foot">不按产品标称价值计算佣金</div>
+            <button class="product-detail-button" type="button" data-product="cofounder">查看产品详情</button>
+          </article>
+          <article class="product">
+            <div class="product-top"><span class="tag tag-muted">会员</span><span class="product-index">03 / 03</span></div>
+            <div class="product-art soft" data-slot="product-image"><img src="assets/product-travel.webp" alt="旅行装精华与面霜产品摄影示意图" loading="lazy"></div>
+            <h3>会员体验产品包</h3>
+            <p>产品规格以正式订单清单为准</p>
+            <div class="product-price"><strong>伙伴方案</strong><small>按确认版本</small></div>
+            <div class="product-foot">复购与退款按平台规则执行</div>
+            <button class="product-detail-button" type="button" data-product="member">查看产品详情</button>
+          </article>
+        </div>
+      </section>
+
+      <dialog class="product-detail-dialog" id="productDetailDialog" aria-labelledby="productDetailTitle">
+        <div class="product-detail-content">
+          <div class="product-detail-top">
+            <div>
+              <span class="tag" id="productDetailTag">产品详情</span>
+              <h3 class="product-detail-title" id="productDetailTitle">产品组合</h3>
+            </div>
+            <button class="product-detail-close" id="productDetailClose" type="button" aria-label="关闭产品详情">×</button>
+          </div>
+          <p class="product-detail-summary" id="productDetailSummary"></p>
+          <ul class="product-detail-list" id="productDetailList"></ul>
+          <p class="product-detail-note">产品详情用于合作沟通，最终规格、价格、库存与结算方式以品牌方确认的商品主数据和书面政策为准。</p>
+          <button class="button button-ghost" id="productDetailDone" type="button">返回产品组合</button>
+        </div>
+      </dialog>
+
+      <!-- 芊颜王妃分享工具：将此 section 插入主页面，紧邻原 share section 位置即可。 -->
+      <section class="share-tools-section" id="share-tools" aria-labelledby="share-tools-title">
+        <div class="share-tools-shell">
+          <div class="share-tools-copy">
+            <p class="share-tools-kicker">PARTNER SHARE KIT</p>
+            <h2 id="share-tools-title">一键生成品牌分享海报</h2>
+            <p class="share-tools-lede">先选择想分享的入口，再生成链接或海报。公开链接可以直接使用；邀请码仅用于生成已验证的伙伴入口。</p>
+          </div>
+      
+          <div class="share-tools-layout">
+            <form class="share-tools-card" id="shareToolsForm" novalidate>
+              <div class="share-tools-card-heading">
+                <span class="share-tools-step">01</span>
+                <div>
+                  <h3>生成分享链接</h3>
+                  <p>邀请码为可选项，系统只会使用已验证的邀请码。</p>
+                </div>
+              </div>
+              <div class="share-tools-fields">
+                <label class="share-tools-field">
+                  <span>邀请码（可选）</span>
+                  <input id="shareToolsCode" name="code" inputmode="text" autocomplete="off" maxlength="80" placeholder="例如 QYWF-001">
+                </label>
+                <label class="share-tools-field">
+                  <span>产品入口（可选）</span>
+                  <select id="shareToolsProduct" name="product">
+                    <option value="">品牌合作中心</option>
+                    <option value="director">四大四小产品组合</option>
+                    <option value="cofounder">联合创始人产品包</option>
+                    <option value="member">会员体验产品包</option>
+                  </select>
+                </label>
+              </div>
+              <div class="share-tools-actions">
+                <button class="share-tools-button share-tools-button-primary" id="shareToolsGenerate" type="submit">生成链接</button>
+                <button class="share-tools-button share-tools-button-ghost" id="shareToolsCopy" type="button" disabled>复制链接</button>
+              </div>
+              <p class="share-tools-status" id="shareToolsStatus" role="status" aria-live="polite"></p>
+              <output class="share-tools-url" id="shareToolsUrl" aria-live="polite"></output>
+            </form>
+      
+            <div class="share-tools-card share-tools-poster-card">
+              <div class="share-tools-card-heading">
+                <span class="share-tools-step">02</span>
+                <div>
+                  <h3>生成品牌海报</h3>
+                  <p>海报内置可扫描二维码，图片只在你的设备上生成。</p>
+                </div>
+              </div>
+              <div class="share-tools-poster-preview" id="shareToolsPosterPreview" aria-live="polite">
+                <div class="share-tools-poster-placeholder"><span aria-hidden="true">✦</span><span>生成链接后预览海报</span></div>
+              </div>
+              <div class="share-tools-actions share-tools-poster-actions">
+                <button class="share-tools-button share-tools-button-primary" id="shareToolsPoster" type="button" disabled>生成海报</button>
+                <a class="share-tools-button share-tools-button-ghost share-tools-download" id="shareToolsDownload" download="qianyanwangfei-partner.png" hidden>下载 PNG</a>
+              </div>
+              <p class="share-tools-hint">手机端可长按海报图片保存；二维码只指向公开品牌入口或已验证伙伴链接。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+        .share-tools-section{padding:52px 0 0}.share-tools-shell{padding:28px;border:1px solid #d8e9f7;border-radius:20px;background:linear-gradient(135deg,#f5fbff,#fff 65%,#edf7ff);box-shadow:0 18px 44px rgba(43,78,116,.08)}.share-tools-copy{max-width:720px}.share-tools-kicker{margin:0 0 7px;color:#176ec4;font-size:11px;font-weight:800;letter-spacing:.16em}.share-tools-copy h2{margin:0;color:#182e4c;font-family:Georgia,"Songti SC",serif;font-size:clamp(27px,4vw,38px);line-height:1.1}.share-tools-lede{margin:11px 0 0;color:#657990;font-size:14px}.share-tools-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:22px}.share-tools-card{padding:21px;background:rgba(255,255,255,.9);border:1px solid #dbeaf6;border-radius:15px;box-shadow:0 9px 25px rgba(43,78,116,.06)}.share-tools-card-heading{display:flex;gap:11px;align-items:flex-start}.share-tools-step{display:grid;flex:0 0 auto;width:30px;height:30px;place-items:center;color:#fff;background:linear-gradient(145deg,#32b1ff,#1578e8);border-radius:10px 10px 10px 3px;font-size:11px;font-weight:800}.share-tools-card h3{margin:2px 0 2px;color:#1b3c70;font-size:17px}.share-tools-card-heading p{margin:0;color:#7b8ca0;font-size:12px}.share-tools-fields{display:grid;gap:10px;margin-top:19px}.share-tools-field{display:grid;gap:6px;color:#667990;font-size:12px;font-weight:700}.share-tools-field input,.share-tools-field select{width:100%;height:47px;padding:0 12px;color:#1e2c3f;background:#fff;border:1px solid #cddfeb;border-radius:9px;outline:none}.share-tools-field input:focus,.share-tools-field select:focus{border-color:#1688ff;box-shadow:0 0 0 3px rgba(22,136,255,.12)}.share-tools-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}.share-tools-button{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:0 15px;border:1px solid transparent;border-radius:9px;cursor:pointer;font-weight:750;text-decoration:none;transition:.2s ease}.share-tools-button:disabled{cursor:not-allowed;opacity:.52}.share-tools-button-primary{color:#fff;background:#1688ff;box-shadow:0 8px 18px rgba(22,136,255,.18)}.share-tools-button-primary:hover:not(:disabled){background:#0d72dd;transform:translateY(-1px)}.share-tools-button-ghost{color:#1769bd;background:#fff;border-color:#c2dced}.share-tools-button-ghost:hover:not(:disabled){border-color:#8fc3ed;background:#f5fbff}.share-tools-status{min-height:21px;margin:13px 0 0;color:#6c7e92;font-size:12px}.share-tools-status[data-state=error]{color:#be5d4c}.share-tools-status[data-state=success]{color:#21835e}.share-tools-status[data-state=loading]{color:#176ec4}.share-tools-url{display:block;min-height:21px;margin-top:5px;color:#1264bb;font-size:12px;overflow-wrap:anywhere}.share-tools-poster-preview{display:grid;place-items:center;min-height:290px;margin-top:17px;padding:12px;background:linear-gradient(135deg,#edf8ff,#fff);border:1px dashed #bddbf0;border-radius:12px}.share-tools-poster-preview img{display:block;max-width:100%;max-height:450px;border-radius:9px;box-shadow:0 12px 26px rgba(25,76,124,.17)}.share-tools-poster-placeholder{display:grid;gap:8px;place-items:center;color:#7890a8;font-size:13px}.share-tools-poster-placeholder span:first-child{color:#1688ff;font-size:27px}.share-tools-hint{margin:11px 0 0;color:#8695a7;font-size:11px}.share-tools-download[hidden]{display:none}@media(min-width:760px){.share-tools-shell{padding:34px}.share-tools-layout{grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:18px}.share-tools-fields{grid-template-columns:1fr 1fr}.share-tools-button{min-width:120px}}
+      </style>
+
+    </main>
+
+    <nav class="floating-nav" aria-label="快速导航">
+      <a class="floating-nav-item is-active" href="#top"><span aria-hidden="true">⌂</span><strong>首页</strong></a>
+      <a class="floating-nav-item" href="#products"><span aria-hidden="true">01</span><strong>产品</strong></a>
+      <a class="floating-nav-item" href="#process"><span aria-hidden="true">02</span><strong>流程</strong></a>
+      <a class="floating-nav-item" href="#share-tools"><span aria-hidden="true">03</span><strong>分享</strong></a>
+    </nav>
+
+    <footer>
+      <div class="footer-line"><span>© 2026 芊颜王妃品牌合作中心 · Partner Desk</span><span class="footer-links"><a href="#products">产品</a><a href="#process">流程</a><a href="#share-tools">申请合作</a></span><span class="footer-demo">合作信息以品牌方确认版本为准</span></div>
+    </footer>
+  </div>
+
+  <script>
+    const codeInput = document.querySelector('#code');
+    const shareUrl = document.querySelector('#shareUrl');
+    const generateButton = document.querySelector('#gen');
+    const productDetailDialog = document.querySelector('#productDetailDialog');
+    const productDetailTag = document.querySelector('#productDetailTag');
+    const productDetailTitle = document.querySelector('#productDetailTitle');
+    const productDetailSummary = document.querySelector('#productDetailSummary');
+    const productDetailList = document.querySelector('#productDetailList');
+    const productDetailClose = document.querySelector('#productDetailClose');
+    const productDetailDone = document.querySelector('#productDetailDone');
+
+    const PRODUCT_DETAILS = {
+      director: {
+        tag: '董事礼包',
+        title: '四大四小产品组合',
+        summary: '面向董事伙伴的组合说明，展示礼包构成与结算提示。',
+        items: [['组合构成', '4 个正装套 + 4 个体验装套'], ['方案口径', '以确认版本为准'], ['规则提示', '按实际有效收款计算奖励']],
+      },
+      cofounder: {
+        tag: '联合创始人',
+        title: '联合创始人产品包',
+        summary: '用于展示联创伙伴的产品包入口，正式规格仍需商品主数据确认。',
+        items: [['组合构成', '以确认版本的商品清单为准'], ['方案口径', '以确认版本为准'], ['规则提示', '不按产品标称价值计算佣金']],
+      },
+      member: {
+        tag: '会员',
+        title: '会员体验产品包',
+        summary: '用于展示会员体验组合，复购和退款规则在正式版中由订单状态驱动。',
+        items: [['组合构成', '以确认版本的商品清单为准'], ['方案口径', '以确认版本为准'], ['规则提示', '复购与退款按平台规则执行']],
+      },
+    };
+
+    function closeProductDetail() {
+      if (!productDetailDialog) return;
+      if (typeof productDetailDialog.close === 'function') productDetailDialog.close();
+      else productDetailDialog.removeAttribute('open');
+    }
+
+    function openProductDetail(productId) {
+      const detail = PRODUCT_DETAILS[productId];
+      if (!detail || !productDetailDialog) return;
+      productDetailTag.textContent = detail.tag;
+      productDetailTitle.textContent = detail.title;
+      productDetailSummary.textContent = detail.summary;
+      productDetailList.replaceChildren(...detail.items.map(([label, value]) => {
+        const item = document.createElement('li');
+        const labelNode = document.createElement('span');
+        const valueNode = document.createElement('strong');
+        labelNode.textContent = label;
+        valueNode.textContent = value;
+        item.append(labelNode, valueNode);
+        return item;
+      }));
+      if (typeof productDetailDialog.showModal === 'function') productDetailDialog.showModal();
+      else productDetailDialog.setAttribute('open', '');
+      productDetailClose.focus();
+    }
+
+    document.querySelectorAll('.product-detail-button').forEach((button) => {
+      button.addEventListener('click', () => openProductDetail(button.dataset.product));
+    });
+    productDetailClose.addEventListener('click', closeProductDetail);
+    productDetailDone.addEventListener('click', closeProductDetail);
+    productDetailDialog.addEventListener('click', (event) => {
+      if (event.target === productDetailDialog) closeProductDetail();
+    });
+
+    const coverCarouselImage = document.querySelector('#coverCarouselImage');
+    const coverCarousel = document.querySelector('#coverCarousel');
+    const coverDots = [...document.querySelectorAll('.cover-carousel-dot')];
+    const coverSlides = [
+      ['assets/brand-scene.webp', '芊颜王妃品牌人物封面场景'],
+      ['assets/product-collection.webp', '芊颜王妃产品组合摄影场景'],
+      ['assets/product-serum.webp', '芊颜王妃护理细节摄影场景'],
+    ];
+    let coverIndex = 0;
+    let coverTimer;
+    function showCoverSlide(index) {
+      coverIndex = (index + coverSlides.length) % coverSlides.length;
+      const [src, alt] = coverSlides[coverIndex];
+      if (coverCarouselImage) { coverCarouselImage.classList.add('is-changing'); window.setTimeout(() => { coverCarouselImage.src = src; coverCarouselImage.alt = alt; coverCarouselImage.classList.remove('is-changing'); }, 180); }
+      coverDots.forEach((dot, i) => { dot.classList.toggle('is-active', i === coverIndex); dot.setAttribute('aria-selected', i === coverIndex ? 'true' : 'false'); });
+    }
+    function startCoverRotation() { window.clearInterval(coverTimer); coverTimer = window.setInterval(() => showCoverSlide(coverIndex + 1), 5200); }
+    coverDots.forEach((dot) => dot.addEventListener('click', () => { showCoverSlide(Number(dot.dataset.coverIndex)); startCoverRotation(); }));
+    coverCarousel?.addEventListener('mouseenter', () => window.clearInterval(coverTimer));
+    coverCarousel?.addEventListener('mouseleave', startCoverRotation);
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) startCoverRotation();
+
+  </script>
+  <script src="qrcode-generator.js"></script>
+  <script src="share-tools.js?v=20261003T054500Z"></script>
+
+</body>
+</html>
