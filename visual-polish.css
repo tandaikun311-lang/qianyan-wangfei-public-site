@@ -573,3 +573,72 @@ body { background: var(--beauty-ivory); color: var(--beauty-ink); }
   .cover-hero .hero-note { margin-top: 18px; font-size: 8px; }
   .hero-meta { margin-top: 10px; font-size: 9px; }
 }
+
+/* Distinctive direction: lacquer night / cinnabar / jade. */
+:root {
+  --lacquer: #111718;
+  --lacquer-soft: #1a2423;
+  --porcelain: #f1eee7;
+  --porcelain-deep: #ded8cc;
+  --cinnabar: #e84b3f;
+  --jade: #91b4a7;
+  --ink-muted: #a8b1aa;
+}
+body { background: var(--lacquer); color: var(--porcelain); }
+.site-header { background: rgba(17,23,24,.94); border-bottom: 1px solid rgba(241,238,231,.14); box-shadow: none; }
+.brand-name, .brand-sub { color: var(--porcelain); }
+.brand-sub { opacity: .62; }
+.site-nav a { color: rgba(241,238,231,.76); }
+.site-nav a:hover, .site-nav a:focus-visible { color: var(--cinnabar); }
+.cover-hero { min-height: 700px; background: var(--lacquer); border-bottom: 1px solid rgba(241,238,231,.12); }
+.cover-hero::before { content: "芊颜王妃  /  品牌合作入口"; color: var(--jade); right: clamp(20px,7vw,86px); letter-spacing: .12em; }
+.cover-hero::after { content: "01  /  THE RITUAL"; color: var(--cinnabar); left: clamp(20px,7vw,86px); letter-spacing: .16em; }
+.cover-carousel { left: 54%; width: 46%; border-radius: 0 0 0 150px; border-left: 1px solid rgba(145,180,167,.36); border-bottom: 1px solid rgba(145,180,167,.36); box-shadow: -25px 24px 0 rgba(232,75,63,.12); }
+.cover-carousel::after { background: linear-gradient(90deg, var(--lacquer) 0%, rgba(17,23,24,.12) 26%, rgba(17,23,24,.12) 100%); }
+.cover-carousel > img { object-position: center; filter: saturate(.78) contrast(1.05); }
+.cover-hero > div:not(.cover-carousel) { max-width: 510px; padding-top: 58px; }
+.cover-hero .eyebrow { color: var(--jade); letter-spacing: .1em; font-size: 10px; }
+.cover-hero h1 { color: var(--porcelain); font-family: "Songti SC", "Noto Serif CJK SC", Georgia, serif; font-size: clamp(52px, 8vw, 88px); font-weight: 700; line-height: .99; letter-spacing: -.1em; }
+.cover-hero h1 span { color: var(--cinnabar); }
+.cover-hero .hero-copy { color: var(--ink-muted); max-width: 395px; font-size: 15px; line-height: 1.85; }
+.cover-hero .hero-actions .button-primary { color: var(--lacquer); background: var(--porcelain); border-color: var(--porcelain); border-radius: 2px; box-shadow: none; }
+.cover-hero .hero-actions .button-ghost { color: var(--porcelain); border-color: rgba(241,238,231,.36); border-radius: 2px; background: transparent; }
+.cover-hero .hero-note { color: var(--jade) !important; }
+.hero-meta { color: rgba(241,238,231,.62); }
+.section { border-top: 0; background: var(--porcelain); color: var(--lacquer); }
+#products { background: var(--lacquer-soft); color: var(--porcelain); }
+#share-tools { background: #e2ddd3; color: var(--lacquer); }
+.section-kicker, .section-link, .share-tools-kicker, .share-tools-url { color: var(--cinnabar); }
+.section-title { color: inherit; font-family: "Songti SC", "Noto Serif CJK SC", Georgia, serif; font-weight: 700; letter-spacing: -.06em; }
+.section-desc { color: #6d716c; }
+#products .section-desc { color: var(--ink-muted); }
+.process-step, .product, .share-tools-card { border-radius: 3px; border-color: rgba(17,23,24,.14); background: rgba(255,255,255,.58); box-shadow: 10px 10px 0 rgba(17,23,24,.06); }
+#products .product { border-color: rgba(241,238,231,.16); background: rgba(17,23,24,.4); box-shadow: 10px 10px 0 rgba(232,75,63,.12); }
+.process-step::before, .product::before { background: var(--cinnabar); }
+.process-step-index, .product-index, .share-tools-step { color: var(--porcelain); background: var(--cinnabar); border-radius: 0; }
+.process-step h3, .product h3 { color: inherit; }
+.process-step p, .product p, .product-foot { color: #727771; }
+#products .product p, #products .product-foot { color: var(--ink-muted); }
+.product:hover { border-color: var(--cinnabar); box-shadow: 13px 13px 0 rgba(232,75,63,.17); transform: translate(-2px,-2px); }
+.product.featured { border-color: var(--jade); background: rgba(145,180,167,.13); }
+.product-detail-button { color: var(--lacquer); background: var(--porcelain); border-color: var(--porcelain); border-radius: 2px; }
+.share-tools-shell { border-radius: 3px; border-color: rgba(17,23,24,.15); background: rgba(255,253,250,.58); box-shadow: 10px 10px 0 rgba(17,23,24,.07); }
+.share-tools-button-primary { color: var(--porcelain); background: var(--lacquer); border-radius: 2px; box-shadow: none; }
+.share-tools-button-ghost { color: var(--lacquer); border-color: rgba(17,23,24,.34); border-radius: 2px; }
+.share-tools-field input, .share-tools-field select { border-radius: 2px; border-color: rgba(17,23,24,.22); background: rgba(255,255,255,.68); }
+.footer-line { border-top-color: rgba(241,238,231,.14); color: var(--ink-muted); }
+.footer-links, .footer-demo { color: var(--ink-muted); }
+.floating-nav { border: 1px solid rgba(241,238,231,.24); border-radius: 4px; background: rgba(17,23,24,.96); box-shadow: 8px 8px 0 rgba(232,75,63,.18); }
+.floating-nav-item { border-radius: 2px; }
+.floating-nav-item span { color: var(--jade); }
+.floating-nav-item:hover, .floating-nav-item:focus-visible, .floating-nav-item.is-active { background: var(--cinnabar); color: var(--porcelain); }
+@media (max-width:759px) {
+  .cover-hero { min-height: 720px; }
+  .cover-hero::after { display: none; }
+  .cover-carousel { left: 0; top: 416px; width: 100%; height: 304px; border-radius: 44px 0 0 0; border-left: 0; box-shadow: 0 -16px 0 rgba(232,75,63,.12); }
+  .cover-carousel::after { background: linear-gradient(180deg, var(--lacquer) 0%, rgba(17,23,24,.05) 30%, rgba(17,23,24,.22) 100%); }
+  .cover-hero > div:not(.cover-carousel) { max-width: 340px; padding-top: 62px; }
+  .cover-hero h1 { font-size: clamp(46px, 13vw, 60px); }
+  .cover-hero .hero-copy { max-width: 305px; font-size: 13px; line-height: 1.68; }
+  .cover-hero .hero-actions .button { min-height: 42px; font-size: 12px; }
+}
