@@ -484,3 +484,19 @@ body { background: var(--pdf-paper); color: var(--pdf-ink); }
   .cover-hero > div:not(.cover-carousel) { width: 100%; padding-top: 58px; }
   .cover-hero h1 { font-size: clamp(48px, 15vw, 72px); }
 }
+
+/* Mobile hero correction after visual review: keep the title block and brand mark separate. */
+@media (max-width:759px) {
+  .cover-hero { min-height: 720px; overflow: hidden; }
+  .cover-hero::after { display: none; }
+  .cover-hero > div:not(.cover-carousel) { padding-top: 54px; }
+  .cover-hero .eyebrow { margin-bottom: 18px; font-size: 9px; }
+  .cover-hero h1 { max-width: 330px; margin: 0; font-size: clamp(43px, 12vw, 58px); line-height: 1.08; letter-spacing: -.07em; }
+  .cover-hero .hero-copy { max-width: 310px; margin-top: 18px; font-size: 13px; line-height: 1.65; }
+  .cover-hero .hero-actions { margin-top: 20px; gap: 8px; }
+  .cover-hero .hero-actions .button { min-height: 42px; padding: 0 12px; font-size: 12px; }
+  .cover-hero .hero-note { margin-top: 18px; font-size: 9px; letter-spacing: .08em; }
+  .cover-hero .hero-meta { margin-top: 12px; max-width: 320px; font-size: 10px; }
+  .cover-carousel { top: 400px; height: 320px; }
+  .cover-carousel-dots { bottom: 15px; }
+}
