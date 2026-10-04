@@ -683,6 +683,40 @@
       if (event.target === productDetailDialog) closeProductDetail();
     });
 
+    // Product links must land on the selected product, including direct visits.
+    const sharedProduct = new URLSearchParams(location.search).get('product');
+    if (Object.hasOwn(PRODUCT_DETAILS, sharedProduct)) {
+      document.querySelector('#products').scrollIntoView({ block: 'start' });
+      openProductDetail(sharedProduct);
+    }
+
+    const floatingItems = [...document.querySelectorAll('.floating-nav-item')];
+    function markNavigation(id) {
+      floatingItems.forEach((item) => {
+        const active = item.getAttribute('href') === '#' + id;
+        item.classList.toggle('is-active', active);
+        if (active) item.setAttribute('aria-current', 'location');
+        else item.removeAttribute('aria-current');
+      });
+    }
+    function syncNavigation() {
+      const ids = ['top', 'process', 'products', 'share-tools'];
+      let current = 'top';
+      ids.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= window.innerHeight * .35) current = id;
+      });
+      markNavigation(current);
+    }
+    let navigationFrame = null;
+    window.addEventListener('scroll', () => {
+      if (navigationFrame !== null) return;
+      navigationFrame = requestAnimationFrame(() => { syncNavigation(); navigationFrame = null; });
+    }, { passive: true });
+    window.addEventListener('hashchange', syncNavigation);
+    window.addEventListener('resize', syncNavigation);
+    syncNavigation();
+
     const coverCarouselImage = document.querySelector('#coverCarouselImage');
     const coverCarousel = document.querySelector('#coverCarousel');
     const coverDots = [...document.querySelectorAll('.cover-carousel-dot')];
