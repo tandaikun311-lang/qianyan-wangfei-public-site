@@ -425,3 +425,62 @@ body { padding-bottom:86px; }
 .brand-reel { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#dfe7e6; }
 .reel-caption { position:absolute; left:15px; bottom:12px; padding:4px 7px; color:rgba(255,255,255,.9); background:rgba(25,42,47,.48); border:1px solid rgba(255,255,255,.32); border-radius:5px; font-size:9px; letter-spacing:.15em; pointer-events:none; }
 @media (min-width:760px) { .reel-shell { grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr); align-items:center; gap:28px; padding:28px; } .reel-frame { min-height:260px; } }
+
+/* 2026-10-04 PDF reference direction: white paper, brand red, structured information blocks. */
+:root {
+  --pdf-red: #df1f2f;
+  --pdf-red-deep: #b91424;
+  --pdf-ink: #252525;
+  --pdf-muted: #6d6d6d;
+  --pdf-paper: #ffffff;
+  --pdf-soft: #f4f4f4;
+}
+body { background: var(--pdf-paper); color: var(--pdf-ink); }
+.site-header { background: rgba(255,255,255,.96); border-bottom: 1px solid #ececec; box-shadow: 0 5px 18px rgba(0,0,0,.04); }
+.brand-name, .brand-sub { color: var(--pdf-red); }
+.brand-sub { letter-spacing: .18em; }
+.site-nav a { color: #383838; }
+.site-nav a:hover, .site-nav a:focus-visible { color: var(--pdf-red); }
+.cover-hero { min-height: 620px; padding: clamp(38px, 7vw, 78px) clamp(21px, 7vw, 84px); background: #fff; border: 0; box-shadow: none; }
+.cover-hero::before { content: "品牌合作资料  ·  门店与市场合作介绍"; top: 22px; right: clamp(20px, 7vw, 84px); color: #8b8b8b; letter-spacing: .08em; font-weight: 600; }
+.cover-hero::after { content: "芊颜王妃  /  BRAND PARTNERSHIP"; left: clamp(21px, 7vw, 84px); bottom: 18px; color: var(--pdf-red); letter-spacing: .12em; }
+.cover-carousel { left: 52%; width: 48%; }
+.cover-carousel::after { background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,.52) 16%, rgba(255,255,255,0) 45%), linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.16)); }
+.cover-carousel > img { object-position: center; }
+.cover-hero > div:not(.cover-carousel) { max-width: 520px; padding-top: 52px; }
+.cover-hero .eyebrow { color: var(--pdf-red); letter-spacing: .1em; font-weight: 800; }
+.cover-hero h1 { color: var(--pdf-ink); font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: clamp(43px, 8vw, 80px); font-weight: 850; letter-spacing: -.08em; }
+.cover-hero h1 span { color: var(--pdf-red); }
+.cover-hero .hero-copy { color: #4e4e4e; max-width: 420px; font-size: 15px; line-height: 1.8; }
+.cover-hero .hero-actions .button-primary { color: #fff; background: var(--pdf-red); border-color: var(--pdf-red); border-radius: 2px; box-shadow: none; }
+.cover-hero .hero-actions .button-ghost { color: var(--pdf-red); border-color: var(--pdf-red); border-radius: 2px; background: #fff; }
+.hero-note { color: #707070 !important; }
+.section { border-top: 1px solid #e4e4e4; }
+.section-kicker, .section-link, .share-tools-kicker, .share-tools-url { color: var(--pdf-red); }
+.section-title { color: var(--pdf-ink); font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; font-weight: 800; letter-spacing: -.04em; }
+.section-desc { color: var(--pdf-muted); }
+.process-step, .product, .share-tools-card { border-radius: 0; border-color: #dedede; background: #fff; box-shadow: none; }
+.process-step::before, .product::before { background: var(--pdf-red); }
+.process-step-index, .product-index, .share-tools-step { color: #fff; background: var(--pdf-red); border-radius: 0; }
+.process-step h3, .product h3 { color: var(--pdf-ink); }
+.process-step p, .product p, .product-foot { color: var(--pdf-muted); }
+.product:hover { border-color: var(--pdf-red); box-shadow: 0 12px 24px rgba(223,31,47,.1); }
+.product.featured { border-color: var(--pdf-red); background: #fff; }
+.product-detail-button { color: #fff; background: var(--pdf-red); border-color: var(--pdf-red); border-radius: 2px; }
+.share-tools-shell { border-radius: 0; border-color: #dcdcdc; background: #fff; box-shadow: none; }
+.share-tools-button-primary { background: var(--pdf-red); border-radius: 2px; box-shadow: none; }
+.share-tools-button-ghost { color: var(--pdf-red); border-color: var(--pdf-red); border-radius: 2px; }
+.share-tools-field input, .share-tools-field select { border-radius: 0; }
+.footer-line { border-top-color: #e2e2e2; }
+.footer-links, .footer-demo { color: #777; }
+.floating-nav { border-color: rgba(255,255,255,.34); border-radius: 4px; background: rgba(37,37,37,.96); box-shadow: 0 12px 28px rgba(0,0,0,.2); }
+.floating-nav-item { border-radius: 2px; }
+.floating-nav-item span { color: #ff6673; }
+.floating-nav-item:hover, .floating-nav-item:focus-visible, .floating-nav-item.is-active { background: var(--pdf-red); color: #fff; }
+@media (max-width: 759px) {
+  .cover-hero { min-height: 690px; padding-top: 28px; }
+  .cover-carousel { left: 0; top: 370px; width: 100%; height: 320px; }
+  .cover-carousel::after { background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0) 28%, rgba(0,0,0,.08) 100%); }
+  .cover-hero > div:not(.cover-carousel) { width: 100%; padding-top: 58px; }
+  .cover-hero h1 { font-size: clamp(48px, 15vw, 72px); }
+}
