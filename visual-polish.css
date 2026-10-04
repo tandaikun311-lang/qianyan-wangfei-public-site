@@ -642,3 +642,73 @@ body { background: var(--lacquer); color: var(--porcelain); }
   .cover-hero .hero-copy { max-width: 305px; font-size: 13px; line-height: 1.68; }
   .cover-hero .hero-actions .button { min-height: 42px; font-size: 12px; }
 }
+
+/* Final art-direction reset: porcelain / ink / ultramarine gallery catalogue. */
+:root {
+  --gallery-paper: #f2f0ea;
+  --gallery-white: #fbfaf6;
+  --gallery-ink: #151718;
+  --gallery-blue: #2d43c7;
+  --gallery-blue-dark: #202e87;
+  --gallery-gray: #8a8c89;
+  --gallery-line: rgba(21,23,24,.2);
+}
+body { background: var(--gallery-paper); color: var(--gallery-ink); }
+.site-header { background: rgba(242,240,234,.94); border-bottom: 1px solid var(--gallery-line); box-shadow: none; backdrop-filter: blur(12px); }
+.brand-name, .brand-sub { color: var(--gallery-ink); }
+.brand-sub { opacity: .58; letter-spacing: .12em; }
+.site-nav a { color: var(--gallery-ink); }
+.site-nav a:hover, .site-nav a:focus-visible { color: var(--gallery-blue); }
+.cover-hero { min-height: 720px; padding: clamp(32px,6vw,78px) clamp(22px,7vw,92px); background: var(--gallery-paper); border-bottom: 1px solid var(--gallery-line); }
+.cover-hero::before { content: "QYF  /  2026  /  01"; top: 24px; right: clamp(22px,7vw,92px); color: var(--gallery-gray); letter-spacing: .18em; font-size: 9px; }
+.cover-hero::after { content: "品牌合作中心  /  研究、体验、合作"; left: clamp(22px,7vw,92px); bottom: 20px; color: var(--gallery-blue); letter-spacing: .09em; font-size: 9px; }
+.cover-carousel { left: 53%; width: 47%; border-radius: 0; border: 1px solid var(--gallery-line); box-shadow: 18px 18px 0 var(--gallery-blue); }
+.cover-carousel::after { background: linear-gradient(90deg, rgba(242,240,234,.8) 0%, rgba(242,240,234,.04) 26%, rgba(21,23,24,.1) 100%); }
+.cover-carousel > img { object-position: center; filter: saturate(.72) contrast(1.04); }
+.cover-hero > div:not(.cover-carousel) { max-width: 540px; padding-top: 64px; }
+.cover-hero .eyebrow { color: var(--gallery-blue); letter-spacing: .14em; font-size: 9px; font-weight: 800; }
+.cover-hero h1 { max-width: 530px; color: var(--gallery-ink); font-family: "Songti SC", "Noto Serif CJK SC", Georgia, serif; font-size: clamp(54px,8.5vw,94px); font-weight: 700; line-height: .98; letter-spacing: -.11em; }
+.cover-hero h1 span { color: var(--gallery-blue); }
+.cover-hero .hero-copy { max-width: 360px; color: #555957; font-size: 14px; line-height: 1.9; }
+.cover-hero .hero-actions .button-primary { color: var(--gallery-white); background: var(--gallery-ink); border-color: var(--gallery-ink); border-radius: 0; box-shadow: none; }
+.cover-hero .hero-actions .button-ghost { color: var(--gallery-ink); border-color: var(--gallery-ink); border-radius: 0; background: transparent; }
+.cover-hero .hero-note { color: var(--gallery-blue) !important; letter-spacing: .16em; }
+.hero-meta { color: var(--gallery-gray); }
+.section { background: var(--gallery-white); color: var(--gallery-ink); border-top: 0; }
+#products { background: var(--gallery-ink); color: var(--gallery-white); }
+#share-tools { background: var(--gallery-paper); color: var(--gallery-ink); }
+.section-kicker, .section-link, .share-tools-kicker, .share-tools-url { color: var(--gallery-blue); }
+.section-title { color: inherit; font-family: "Songti SC", "Noto Serif CJK SC", Georgia, serif; font-weight: 700; letter-spacing: -.08em; }
+.section-desc { color: #696d6a; }
+#products .section-desc { color: #b8bbb6; }
+.process-step, .product, .share-tools-card { border-radius: 0; border: 1px solid var(--gallery-line); background: transparent; box-shadow: none; }
+#products .product { border-color: rgba(251,250,246,.28); background: transparent; box-shadow: none; }
+.process-step::before, .product::before { background: var(--gallery-blue); }
+.process-step-index, .product-index, .share-tools-step { color: var(--gallery-white); background: var(--gallery-blue); border-radius: 0; }
+.process-step h3, .product h3 { color: inherit; }
+.process-step p, .product p, .product-foot { color: #777b77; }
+#products .product p, #products .product-foot { color: #b8bbb6; }
+.product:hover { border-color: var(--gallery-blue); box-shadow: 8px 8px 0 rgba(45,67,199,.4); transform: translate(-2px,-2px); }
+.product.featured { border-color: var(--gallery-blue); background: rgba(45,67,199,.16); }
+.product-detail-button { color: var(--gallery-white); background: var(--gallery-blue); border-color: var(--gallery-blue); border-radius: 0; }
+.share-tools-shell { border-radius: 0; border: 1px solid var(--gallery-line); background: var(--gallery-white); box-shadow: 8px 8px 0 rgba(21,23,24,.1); }
+.share-tools-button-primary { color: var(--gallery-white); background: var(--gallery-blue-dark); border-radius: 0; box-shadow: none; }
+.share-tools-button-ghost { color: var(--gallery-blue-dark); border-color: var(--gallery-blue-dark); border-radius: 0; }
+.share-tools-field input, .share-tools-field select { border-radius: 0; border-color: var(--gallery-line); background: var(--gallery-white); }
+.footer-line { border-top-color: var(--gallery-line); color: var(--gallery-gray); }
+.footer-links, .footer-demo { color: var(--gallery-gray); }
+.floating-nav { border: 1px solid rgba(251,250,246,.32); border-radius: 0; background: rgba(21,23,24,.96); box-shadow: 8px 8px 0 rgba(45,67,199,.55); }
+.floating-nav-item { border-radius: 0; }
+.floating-nav-item span { color: #8794ff; }
+.floating-nav-item:hover, .floating-nav-item:focus-visible, .floating-nav-item.is-active { background: var(--gallery-blue); color: var(--gallery-white); }
+@media (max-width:759px) {
+  .cover-hero { min-height: 720px; padding-top: 28px; }
+  .cover-hero::after { display: none; }
+  .cover-carousel { left: 0; top: 414px; width: 100%; height: 306px; box-shadow: 10px 10px 0 var(--gallery-blue); }
+  .cover-carousel::after { background: linear-gradient(180deg, var(--gallery-paper) 0%, rgba(242,240,234,.05) 28%, rgba(21,23,24,.12) 100%); }
+  .cover-hero > div:not(.cover-carousel) { max-width: 340px; padding-top: 62px; }
+  .cover-hero h1 { max-width: 330px; font-size: clamp(46px,13vw,60px); line-height: 1.02; }
+  .cover-hero .hero-copy { max-width: 306px; font-size: 13px; line-height: 1.7; }
+  .cover-hero .hero-actions .button { min-height: 42px; font-size: 12px; }
+  .section { padding-left: 20px; padding-right: 20px; }
+}
